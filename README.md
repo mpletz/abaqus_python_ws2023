@@ -7,4 +7,12 @@ We decided to meet up on Thursdays from 1 pm to 4 pm ([dates](https://online.uni
 You need a laptop with Abaqus and an editor like Visual Studio Code, Atom, or Spyder on it. Later on, a Python installation including modules like NumPy and matplotlib would be nice, e.g. by installing [Anaconda](https://www.anaconda.com/download).
 
 ### Unit 1, 2022-10-05
-* ...
+* Record Abaqus CAE commands: .rpy, .jnl, or macro-files.
+* Running scripts in Abaqus
+* Some general statements and header for Abaqus Python script (import, Mdb(), etc.)
+* Looked at some projects from the last years
+
+#### Exercise
+Create a sketch with a wavy surface using a spline.
+
+![](images/draw-spline.png)
