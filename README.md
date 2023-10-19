@@ -22,7 +22,7 @@ Create a sketch with a wavy surface using a spline.
 * Looked at selecting things in Abaqus including masks, findAt, bounding boxes and using other properties of the entities
 * Defined the assignment of the first homework
 
-#### Homework 1
+#### Homework 1 (until unit 3, Nov. 9th)
 Extend the Abaqus/Python script to do the following things:
 * Use the sketch from unit 1 to create a planar part
 * cut the geometry at half of the waves' height

@@ -78,45 +78,4 @@ mdb.models['Model-1'].sketches['my_sketch'].Spline(array([[0.0, 0.0],
     2.37163171621856], [48.4848484848485, 1.83290608690965], [48.989898989899, 
     1.24813378279395], [49.4949494949495, 0.632005583893403], [50.0, 
     2.44929359829471e-15]], 'd'))
-mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
-    mdb.models['Model-1'].sketches['my_sketch'])
-del mdb.models['Model-1'].sketches['__edit__']
-mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=200.0)
-mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
-    gridOrigin=(25.0, -5.50001966953278))
-mdb.models['Model-1'].sketches['__profile__'].retrieveSketch(sketch=
-    mdb.models['Model-1'].sketches['my_sketch'])
-mdb.models['Model-1'].Part(dimensionality=TWO_D_PLANAR, name='waves', type=
-    DEFORMABLE_BODY)
-mdb.models['Model-1'].parts['waves'].BaseShell(sketch=
-    mdb.models['Model-1'].sketches['__profile__'])
-del mdb.models['Model-1'].sketches['__profile__']
-mdb.models['Model-1'].parts['waves'].DatumPlaneByPrincipalPlane(offset=0.0, 
-    principalPlane=XZPLANE)
-mdb.models['Model-1'].parts['waves'].PartitionFaceByDatumPlane(datumPlane=
-    mdb.models['Model-1'].parts['waves'].datums[2], faces=
-    mdb.models['Model-1'].parts['waves'].faces.findAt(((39.797882, -7.620625, 
-    0.0), )))
-mdb.models['Model-1'].ConstrainedSketch(gridSpacing=2.61, name='__profile__', 
-    sheetSize=104.4, transform=
-    mdb.models['Model-1'].parts['waves'].MakeSketchTransform(
-    sketchPlane=mdb.models['Model-1'].parts['waves'].faces.findAt((7.383381, 
-    -0.833704, 0.0), (0.0, 0.0, 1.0)), sketchPlaneSide=SIDE1, 
-    sketchOrientation=RIGHT, origin=(25.0, -7.932046, 0.0)))
-mdb.models['Model-1'].parts['waves'].projectReferencesOntoSketch(filter=
-    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
-mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-25.0, -1.305), 
-    point2=(25.5167541503906, -0.931505139831543))
-mdb.models['Model-1'].sketches['__profile__'].vertices.findAt((-25.0, -1.305))
-mdb.models['Model-1'].sketches['__profile__'].geometry.findAt((-25.0, 
-    0.432046))
-mdb.models['Model-1'].sketches['__profile__'].CoincidentConstraint(
-    addUndoState=False, entity1=
-    mdb.models['Model-1'].sketches['__profile__'].vertices.findAt((-25.0, 
-    -1.305), ), entity2=
-    mdb.models['Model-1'].sketches['__profile__'].geometry.findAt((-25.0, 
-    0.432046), ))
-mdb.models['Model-1'].parts['waves'].PartitionFaceBySketch(faces=
-    mdb.models['Model-1'].parts['waves'].faces.findAt(((7.383381, -0.833704, 
-    0.0), )), sketch=mdb.models['Model-1'].sketches['__profile__'])
-del mdb.models['Model-1'].sketches['__profile__']
+# Save by martinpletz on 2023_10_19-15.48.23; build 2020 2019_09_13-19.49.31 163176
