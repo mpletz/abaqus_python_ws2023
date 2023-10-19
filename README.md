@@ -6,7 +6,7 @@ We decided to meet up on Thursdays from 1 pm to 4 pm ([dates](https://online.uni
 
 You need a laptop with Abaqus and an editor like Visual Studio Code, Atom, or Spyder on it. Later on, a Python installation including modules like NumPy and matplotlib would be nice, e.g. by installing [Anaconda](https://www.anaconda.com/download).
 
-### Unit 1, 2022-10-05
+### Unit 1, 2023-10-05
 * Record Abaqus CAE commands: .rpy, .jnl, or macro-files.
 * Running scripts in Abaqus
 * Some general statements and header for Abaqus Python script (import, Mdb(), etc.)
@@ -16,3 +16,16 @@ You need a laptop with Abaqus and an editor like Visual Studio Code, Atom, or Sp
 Create a sketch with a wavy surface using a spline.
 
 ![](images/draw-spline.png)
+
+### Unit 2, 2023-10-19
+* Repeated stuff from unit 1
+* Looked at selecting things in Abaqus including masks, findAt, bounding boxes and using other properties of the entities
+* Defined the assignment of the first homework
+
+#### Homework 1
+Extend the Abaqus/Python script to do the following things:
+* Use the sketch from unit 1 to create a planar part
+* cut the geometry at half of the waves' height
+* create sets for the bottom, left, right edge. Create one set of the upper halve of the waves and the lower half of the waves. Give the sets names that you can easily remember and use in the further model creation
+
+> Extra effort (optional): Create separate sets for the upper and lower bumps and call them 'top-bump-01', ... Note that you can fill a string with zeros from the left using '5'.zfill(3) --> '005'

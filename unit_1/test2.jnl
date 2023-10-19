@@ -1,0 +1,75 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=200.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(-48.75, 17.5), 
+    point2=(19.3292846679688, -12.1463108062744))
+mdb.models['Model-1'].Part(dimensionality=TWO_D_PLANAR, name='Part-1', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-1'].BaseShell(sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#1 ]', 
+    ), ), name='Set-1')
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.findAt(((19.329285, -4.734733, 
+    0.0), )), name='Set-2')
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.findAt((19.329285, -4.734733, 
+    0.0), ), name='test1')
+#* TypeError: keyword error on edges
+mdb.models['Model-1'].parts['Part-1'].ReferencePoint(point=(5.0, 5.0, 0.0))
+mdb.models['Model-1'].rootAssembly.ReferencePoint(point=(0.0, 0.0, 0.0))
+mdb.models['Model-1'].rootAssembly.Set(name='Set-1', referencePoints=(
+    mdb.models['Model-1'].rootAssembly.referencePoints[1], ))
+mdb.models['Model-1'].rootAssembly.ReferencePoint(point=(0.0, 6, 0.0))
+mdb.models['Model-1'].rootAssembly.Set(name='rp', referencePoints=
+    mdb.models['Model-1'].rootAssembly.features['RP-2'])
+#* TypeError: referencePoints; found Feature, expecting tuple
+mdb.models['Model-1'].rootAssembly.Set(name='rp', referencePoints=(
+    mdb.models['Model-1'].rootAssembly.features['RP-2'], ))
+#* TypeError: referencePoints[0]; found Feature, expecting tuple
+mdb.models['Model-1'].rootAssembly.Set(name='rp', referencePoints=(
+    mdb.models['Model-1'].rootAssembly.referencePoints[3], ))
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=3.71, name='__profile__', 
+    sheetSize=148.5, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces.findAt((-3.36381, 
+    7.617896, 0.0), (0.0, 0.0, 1.0)), sketchPlaneSide=SIDE1, 
+    sketchOrientation=RIGHT, origin=(-14.710358, 2.676845, 0.0)))
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].CircleByCenterPerimeter(center=(
+    -10.4495998857422, 2.38704259613037), point1=(3.99347720166016, 
+    0.0663047573852538))
+mdb.models['Model-1'].parts['Part-1'].PartitionFaceBySketch(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.findAt(((-3.36381, 7.617896, 
+    0.0), )), sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts['Part-1'].SetByBoolean(name='Set-3', sets=(
+    mdb.models['Model-1'].parts['Part-1'].sets['Set-2'], 
+    mdb.models['Model-1'].parts['Part-1'].sets['Set-1']))
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.findAt((19.329285, -4.734733, 
+    0.0), ), name='close')
+#* TypeError: keyword error on edges
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.findAt((19.329285, -4.734733, 
+    0.0), ), name='close')
+#* TypeError: keyword error on edges
+mdb.models['Model-1'].StaticStep(name='Step-1', previous='Initial')
+mdb.models['Model-1'].FieldOutputRequest(createStepName='Step-1', name=
+    'F-Output-2', timeInterval=1e-05, variables=('CSTRESS', ))
+# Save by martinpletz on 2023_10_19-14.47.15; build 2020 2019_09_13-19.49.31 163176

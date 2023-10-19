@@ -21,10 +21,10 @@ y = ampl * np.sin(n_waves*np.pi/w*x)
 xy_points = np.column_stack((x,y))
 
 Mdb()
+model = mdb.models['Model-1']
 
 # create sketch and draw lines and spline
-s = mdb.models['Model-1'].ConstrainedSketch(name='my_sketch',
-                                            sheetSize=200.0)
+s = model.ConstrainedSketch(name='my_sketch', sheetSize=200.0)
 
 s.Line(point1=(0,-h), point2=(0,0))
 s.Line(point1=(w,-h), point2=(w,0))
