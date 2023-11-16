@@ -31,6 +31,8 @@ Extend the Abaqus/Python script to do the following things:
 > Extra effort (optional): Create separate sets for the upper and lower bumps and call them 'top-bump-01', ... Note that you can fill a string with zeros from the left using '5'.zfill(3) --> '005'
 
 ### Unit 3, 2023-11-16
-* Overview of results in the odb and how to extract that
+* Overview of results in the `odb` file and how to extract that
 * Created contour plot images together
-* Looked into modelling & criterions for projects & you shared your ideas
+* Looked into modeling & criterions for projects & you shared your ideas
+
+![](images/project-criterions.png)
