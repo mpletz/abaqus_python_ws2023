@@ -36,3 +36,15 @@ Extend the Abaqus/Python script to do the following things:
 * Looked into modeling & criterions for projects & you shared your ideas
 
 ![](images/project-criterions.png)
+
+### Unit 4, 2023-11-23
+* Continued to look into the model evaluation
+* Started with chapter 4 (pdf) or chapter 5 ([online](https://martinpletz.com/fe-scripting-5)), where we discussed how to assemble a scripted model.
+* *the monitor cable did not work*, so the practical use of evaluation is put into the ...
+
+#### Homework 2 (until Dec. 7th)
+
+Further evaluate the odb we created from the inp ile in unit 3:
+
+* Evaluate the history output and write it into a dat file: there is output of the contour integrals written to the odb: see how to obtain that.
+* (for the motivated ones): Create a path that starts at the crack tip and evaluate stresses in the direction of the last crack increment. Export these data and plot it with the tool of your choice.
