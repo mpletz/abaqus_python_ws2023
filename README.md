@@ -48,3 +48,12 @@ Further evaluate the odb we created from the inp ile in unit 3:
 
 * Evaluate the history output and write it into a dat file: there is output of the contour integrals written to the odb: see how to obtain that.
 * (for the motivated ones): Create a path that starts at the crack tip and evaluate stresses in the direction of the last crack increment. Export these data and plot it with the tool of your choice.
+
+-----
+
+Some resources that can help you with problems you might have using or scripting Abaqus
+
+- [3DS Platform](https://eu1.iam.3dexperience.3ds.com/login)(you can register with a `unileoben.ac.at` address): the Abaqus documentation, some tips and resources for Abaqus 
+- Jorgen Bergström with his homepage [PolymerFEM](https://polymerfem.com), e.g. with a nice [into to FEM](https://polymerfem.com/full-finite-element-solver-in-100-lines-of-python/): much on material models, but on general FEM theory. Also a forum that can help you.
+- Ronald Wagner's [YouTube chanel](https://www.youtube.com/@hnrwagner): General FEM, user subroutines, some Abaqus/Python
+- Miguel Herráez with [some free content](https://tecnodigitalschool.com): mostly Abaqus/Python, tips & tricks like [this one](https://www.linkedin.com/posts/miguel-herraez-matesanz_abaqus-python-autocompletion-activity-7133419225913696256-O8aq/)
