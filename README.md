@@ -49,6 +49,16 @@ Further evaluate the odb we created from the inp ile in unit 3:
 * Evaluate the history output and write it into a dat file: there is output of the contour integrals written to the odb: see how to obtain that.
 * (for the motivated ones): Create a path that starts at the crack tip and evaluate stresses in the direction of the last crack increment. Export these data and plot it with the tool of your choice.
 
+### Unit 5, 2023-12-07
+
+Finished with going through the script including deleting unwanted files and working in subfolders. Brought Abaqus/Python cheatsheets that can be also found [online](https://martinpletz.com/cheatsheets).
+
+Discussed your final project ideas and drew model sketches for them.
+
+### Unit 6, 2023-12-14
+
+Continue to work on your projects, I will provide feedback on your homework that you can consider in the scripts you will develop in your projects. 
+
 -----
 
 Some resources that can help you with problems you might have using or scripting Abaqus
